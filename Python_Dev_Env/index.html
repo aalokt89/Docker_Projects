@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Test API Lambda</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="modal_container">
+			<h1>Retrieve the current date & time or a random UUID</h1>
+			<div class="btn_group">
+				<a class="btn" href="https://enbjotk6k6.execute-api.us-east-1.amazonaws.com/datetime" target="_blank">
+					Get Date & Time
+				</a>
+				<a
+					class="btn"
+					href="https://enbjotk6k6.execute-api.us-east-1.amazonaws.com/random-uuid"
+					target="_blank"
+				>
+					Get Random UUID
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	body {
+		font-family: poppins;
+		font-size: 18px;
+		background-color: #101532;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	.a {
+		text-decoration: none;
+	}
+
+	.modal_container {
+		display: flex;
+		flex-direction: column;
+		padding: 48px;
+		width: 328px;
+		border-radius: 16px;
+	}
+
+	.modal_container h1 {
+		font-size: 32px;
+		color: #b9bdda;
+		line-height: 1.2em;
+		margin-bottom: 64px;
+	}
+
+	.btn_group {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.btn {
+		display: flex;
+		padding: 8px 24px;
+		background-color: #4455bb;
+		opacity: 1;
+		color: white;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 1.2em;
+		letter-spacing: 0.06em;
+		height: 48px;
+		border-radius: 8px;
+		transition: 0.3s;
+		text-decoration: none;
+	}
+
+	.btn:hover {
+		opacity: 0.8;
+	}
+</style>
