@@ -9,7 +9,7 @@ services:
     environment:
       ENVIRONMENT: dev
     volumes:
-      - ./Scripts:/Scripts
+      - ./Lambda_EC2:/Scripts
 
   py_env_2:
     build: 
