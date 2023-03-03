@@ -8,10 +8,11 @@ RUN apt-get update -y \
 #install aws cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
-    && ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
+    && ./aws/install -i /usr/local/aws-cli -b /usr/local/bin \
+    && rm awscliv2.zip
 
 #install python and boto3
 RUN apt-get install python3-pip -y \
     && pip install boto3
 
-CMD [ "bash" ]
+CMD [ "bash"]
