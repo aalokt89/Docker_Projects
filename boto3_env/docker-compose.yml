@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  py_env_1:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: ubuntu_py_aws
+    environment:
+      ENVIRONMENT: dev
+    volumes:
+      - ./Scripts:/Scripts
+
+  py_env_2:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: ubuntu_py_aws
+    environment:
+      ENVIRONMENT: prod
+
+  py_env_3:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: ubuntu_py_aws
+    environment:
+      ENVIRONMENT: prod
+
+      
+
+

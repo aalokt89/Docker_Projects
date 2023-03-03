@@ -14,3 +14,5 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 #install python and boto3
 RUN apt-get install python3-pip -y \
     && pip install boto3
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
